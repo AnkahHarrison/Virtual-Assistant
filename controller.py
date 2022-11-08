@@ -1,0 +1,53 @@
+import pyfirmata
+import time
+comport='COM10'
+board=pyfirmata.Arduino(comport)
+led1=board.get_pin('d:13:o')
+led2=board.get_pin('d:12:o')
+led3=board.get_pin('d:11:o')
+led4=board.get_pin('d:10:o')
+led5=board.get_pin('d:9:o')
+led6=board.get_pin('d:8:o')
+led7=board.get_pin('d:7:o')
+led8=board.get_pin('d:6:o')
+led9=board.get_pin('d:5:o')
+led10=board.get_pin('d:4:o')
+led11=board.get_pin('d:3:o')
+led12=board.get_pin('d:2:o')
+#led13=board.get_pin('d:01:o')
+#led14=board.get_pin('d:0:o')
+
+def led(val):
+    if val==1:
+        led1.write(1)
+        led2.write(1)
+        led3.write(1)
+        led4.write(1)
+        led5.write(1)
+        led6.write(1)
+        led7.write(1)
+        led8.write(1)
+        led9.write(1)
+        led10.write(1)
+        led11.write(1)
+        led12.write(1)
+       # led13.write(1)
+       
+
+       
+    elif val==0:
+        led1.write(0)
+        led2.write(0)
+        led3.write(0)
+        led4.write(0)
+        led5.write(0)
+        led6.write(0)
+        led7.write(0)
+        led8.write(0)
+        led9.write(0)
+        led10.write(0)
+        led11.write(0)
+        led12.write(0)
+      #  led13.write(0)
+      
+      
