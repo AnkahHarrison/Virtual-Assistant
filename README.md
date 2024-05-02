@@ -50,8 +50,6 @@ This repository contains the implementation of a voice assistant programmed in P
 
 Contributions are welcome! Feel free to open issues or pull requests for bug fixes, improvements, or new features.
 
-## License
-
 
 ## Acknowledgements
 
