@@ -1,7 +1,7 @@
 import pyttsx3
 import os
 import speech_recognition as sr
-import controller as cnt
+#import controller as cnt
 import time
 import sys
 import requests
@@ -120,27 +120,27 @@ wishMe()
 if __name__ == '__main__':
      while True:
         query= takeCommand().lower()
-        if 'the room is dark' in query:
-            print("Turning light on..............")
-            speak("okay sir,")
-            speak("Turning on light.")
-            cnt.led(1)
+        # if 'the room is dark' in query:
+        #     print("Turning light on..............")
+        #     speak("okay sir,")
+        #     speak("Turning on light.")
+        #     cnt.led(1)
             
-        elif 'turn off light' in query:
-            print("light off..............")
-            speak('light off..............')
-            cnt.led(0)
-            
-            
-        elif 'stage light' in query:
-            print("led display..............")
-            
-            speak('party mode activated..............')
-            cnt.lEd(2)
+        # elif 'turn off light' in query:
+        #     print("light off..............")
+        #     speak('light off..............')
+        #     cnt.led(0)
             
             
+        # elif 'stage light' in query:
+        #     print("led display..............")
             
-        elif'close the system' in query:
+        #     speak('party mode activated..............')
+        #     cnt.lEd(2)
+            
+            
+            
+        if'close the system' in query:
             speak("Good bye..............")
             speak("Thank you for using me..............")
             print("The system is off")
