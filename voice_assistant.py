@@ -1,38 +1,24 @@
 import pyttsx3
 import os
 import speech_recognition as sr
-#import controller as cnt
+import controller as cnt  #importing the controller module to control the led
 import time
-import sys
-import requests
 import datetime
 import wikipedia
 import webbrowser
 import pyautogui
-from time import sleep
 from pynput.keyboard import Key,Controller
 import keyboard
 import dictapp
-
 import smtplib
-
 import warnings
 warnings.filterwarnings("ignore")
-
-from time import sleep
-
-from gtts import gTTS
-import playsound
-import calendar
+#import playsound
 import smtplib
-
-import random
-import ctypes
-#import windshell
 import subprocess
 import pyjokes
-import requests
-import  json
+
+
 
 
 BOSS ="Sir" 
@@ -120,23 +106,23 @@ wishMe()
 if __name__ == '__main__':
      while True:
         query= takeCommand().lower()
-        # if 'the room is dark' in query:
-        #     print("Turning light on..............")
-        #     speak("okay sir,")
-        #     speak("Turning on light.")
-        #     cnt.led(1)
+        if 'the room is dark' in query:
+            print("Turning light on..............")
+            speak("okay sir,")
+            speak("Turning on light.")
+            cnt.led(1)
             
-        # elif 'turn off light' in query:
-        #     print("light off..............")
-        #     speak('light off..............')
-        #     cnt.led(0)
+        elif 'turn off light' in query:
+            print("light off..............")
+            speak('light off..............')
+            cnt.led(0)
             
             
-        # elif 'stage light' in query:
-        #     print("led display..............")
+        elif 'stage light' in query:
+            print("led display..............")
             
-        #     speak('party mode activated..............')
-        #     cnt.lEd(2)
+            speak('party mode activated..............')
+            cnt.lEd(2)
             
             
             
@@ -200,19 +186,15 @@ if __name__ == '__main__':
             
         elif 'my student portal'in query.lower():
             speak("opening your portal sir")   
-           
             url="https://portal.umat.edu.gh/auth/Account/Login?ReturnUrl=%2Fauth%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DSTUDENT_PORTAL_PROD%26redirect_uri%3Dhttps%253A%252F%252Fportal.umat.edu.gh%252Fstudents%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520api1.read%26code_challenge%3DwD4AgJPjjHN8Xotkp8h0vfubZi1xc2dTMYjOMplpTFw%26code_challenge_method%3DS256%26nonce%3D637905072682809002.NjBmY2RjYWUtYmZkNy00Y2I2LWIzZmMtYzFmNWQwOTJlNTk3ZDVlMzU1NTEtNWQ2Zi00NTlmLTk0MjktY2IzNGRkYjhhZWI4%26state%3DCfDJ8D94Vc7kT9JGtakwKfy00bu_iJEkeze1rpj8Vy4C1S8DwazfgUwx_mvh0XrNkGixS93A6slrQIkWpcxVvFFp89UPP07JK1YfZNjIIYA1TfZkOkfnNikYjZMp8V0ctJSP8RpVpGa9cCMWAhKr_SQpQZizM8A-mROHleZBNeVaKv_VzSYisUt-SQwMlE1lA2E-0CK0XYzxGqijcbhd1OmxTTrj6RsdNU38XEE-Fs8Vlhoc6faM9TPEMxXdElVkCrAAPDxcJfqAG9BLlNgL_oseScbg_WLwJ5GVnnUS_SNbXHCAxQOFk360un4GCk6a4228KPoOpSdjzL7n9Ks0xvEbqryUBo7ZdcNwZXDfkBy4PjXsYlXjG6er1bL2ooi9FRkf_JQU9vDF76eRdqjRtqt9-H4%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.7.1.0"
-        
-            
+                   
             chrome_path ='C:/Program Files/Google/Chrome/Application/chrome.exe %s'
             webbrowser.get(chrome_path).open(url)
             
 
         elif 'virtual learning platform'in query.lower():
-            
-            
+                    
             url="https://foevle.umat.edu.gh"
-        
             speak("opening your virtual learning platform sir")
             chrome_path ='C:/Program Files/Google/Chrome/Application/chrome.exe %s'
             webbrowser.get(chrome_path).open(url)
@@ -327,13 +309,13 @@ if __name__ == '__main__':
         elif "joke" in query or" jokes"in query:
                 speak(pyjokes.get_joke )
                 
-        elif "play music " in query or "play a song" in query:
-             talk("D:\\SEYRAM\\Music(1)")
-             music_dir=" path"
-             songs=os.listdir(music_dir)
-             d=random.choice(songs)
-             random=os.path.join(music_dir,d)
-             playsound.playsound(random)       
+        # elif "play music " in query or "play a song" in query:
+        #      talk("D:\\SEYRAM\\Music(1)")
+        #      music_dir=" path"
+        #      songs=os.listdir(music_dir)
+        #      d=random.choice(songs)
+        #      random=os.path.join(music_dir,d)
+        #      playsound.playsound(random)       
                 
         elif "close application" in query:
                 from dictapp import openappweb
