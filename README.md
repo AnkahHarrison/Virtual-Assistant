@@ -1,3 +1,4 @@
+
 # Ash_AI
 
 # Voice Assistant for Controlling Hardware Devices
@@ -34,6 +35,15 @@ This repository contains the implementation of a voice assistant programmed in P
    python voice_assistant.py
    ```
 
+
+ Run the Standard Pyfirma script from your Arduino IDE:
+
+   ```bash
+
+
+   Standard Pyfirma script from your Arduino IDE
+   ```
+
 2. Speak to the assistant using voice commands.
 
 ## Supported Commands
@@ -61,7 +71,7 @@ Contributions are welcome! Feel free to open issues or pull requests for bug fix
 ---
 
 
-## ERROR
+## POTENTIAL ERRORS AND HOW TO FIX IT
 Traceback (most recent call last):
   File "C:\Users\Seyram\Desktop\voice\Virtual-Assistant\controller.py", line 4, in <module>
     board=pyfirmata.Arduino(comport)
@@ -87,3 +97,6 @@ with
 
 len_args = len(inspect.getfullargspec(func)[0])
 ```
+
+![Screenshot 2024-06-28 142833](https://github.com/AnkahHarrison/Virtual-Assistant/assets/103390535/d7868b6b-a6c8-4ef8-8d47-85edf0995c11)
+![Screenshot 2024-06-28 142650](https://github.com/AnkahHarrison/Virtual-Assistant/assets/103390535/e56671e9-fa4d-4358-9e9b-0e7212ee45c5)
