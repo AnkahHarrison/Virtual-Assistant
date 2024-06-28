@@ -1,6 +1,6 @@
 import pyfirmata
 import time
-comport='COM8'
+comport='COM4'
 board=pyfirmata.Arduino(comport)
 led1=board.get_pin('d:13:o')
 led2=board.get_pin('d:12:o')
